@@ -1,7 +1,7 @@
 name: Hello Flow
-
-on: 
-  workflow_dispatch:
+on:
+  schedule:
+    - cron: '*/5 * * * *'
 
 jobs:
   first-job:
@@ -9,6 +9,5 @@ jobs:
     steps:
       - name: Diga oi
         run: echo "Hello World!"
-
       - name: Diga valeu
         run: echo "Valeu - bye!"
